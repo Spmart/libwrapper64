@@ -10,6 +10,13 @@ RUN apk update && apk add --no-cache \
     musl-dev \
     linux-headers \
     sudo \
+    libxext \
+    libxrender \
+    libxtst \
+    libxi \
+    freetype \
+    procps \
+    gcompat
     && rm -rf /var/cache/apk/*
 
 # Create non-root user
