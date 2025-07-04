@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-# Install essential C/C++ build tools and CMake
+# Install essential C/C++ build tools, CMake and libs for running IDE in the container
 RUN apk update && apk add --no-cache \
     build-base \
     cmake \
@@ -16,7 +16,8 @@ RUN apk update && apk add --no-cache \
     libxi \
     freetype \
     procps \
-    gcompat
+    gcompat \
+    bash
     && rm -rf /var/cache/apk/*
 
 # Create non-root user
