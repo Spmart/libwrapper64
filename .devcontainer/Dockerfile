@@ -20,6 +20,8 @@ RUN apk update && apk add --no-cache \
     bash
     && rm -rf /var/cache/apk/*
 
+SHELL ["/bin/bash", "-c"]
+
 # Create non-root user
 ARG USERNAME=developer
 ARG USER_UID=1000
